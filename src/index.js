@@ -1,5 +1,5 @@
-import "./styles.css";
 import p5 from "p5";
+import "./styles.css";
 
 const items = 200;
 const y = window.innerHeight;
@@ -12,12 +12,6 @@ let sketch = function (p) {
     p.background(0);
   };
   p.draw = () => {
-    // const itemWidth = width/items
-    // console.log("data:", data);
-    // sketch.background(100);
-    // p.fill(255);
-    // p.ellipse(p.mouseX, p.mouseY, 50, 50);
-
     data.forEach((item, index) => {
       const x = index * itemWidth;
       const w = itemWidth;
