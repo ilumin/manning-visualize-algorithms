@@ -12,16 +12,22 @@ let sketch = function (p) {
     p.background(0);
   };
   p.draw = () => {
+    // unsorted
     data.forEach((item, index) => {
       const x = index * itemWidth;
       const w = itemWidth;
       const h = item;
 
-      // unsorted
       p.rect(x, y, w, h);
+    });
 
-      // sorted one
-      p.rect(x, y, w, -h);
+    // sorted
+    data.forEach((item, index) => {
+      const x = index * itemWidth;
+      const w = itemWidth;
+      const h = -item;
+
+      p.rect(x, y, w, h);
     });
   };
 };
