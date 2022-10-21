@@ -16,7 +16,12 @@ let sketch = function (p) {
       const x = index * itemWidth;
       const w = itemWidth;
       const h = item;
+
+      // unsorted
       p.rect(x, y, w, h);
+
+      // sorted one
+      p.rect(x, y, w, -h);
     });
   };
 };
